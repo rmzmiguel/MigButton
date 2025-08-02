@@ -21,27 +21,9 @@
     "postinstall": "npm run build || echo 'Build falló, usando archivos pre-compilados'",
     "prepare": "npm run build || echo 'Build falló durante prepare'"
   },
-  "keywords": [
-    "react",
-    "button",
-    "component",
-    "ui",
-    "typescript",
-    "javascript",
-    "github-package"
-  ],
-  "author": "Miguel Ramírez",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/rmzmiguel/MigButton.git"
-  },
-  "homepage": "https://github.com/rmzmiguel/MigButton#readme",
-  "bugs": {
-    "url": "https://github.com/rmzmiguel/MigButton/issues"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "peerDependencies": {
     "react": "*",
@@ -54,6 +36,24 @@
     "react-dom": {
       "optional": true
     }
+  },
+  "keywords": [
+    "react",
+    "button",
+    "component",
+    "ui",
+    "typescript",
+    "javascript",
+    "github-package"
+  ],
+  "author": "Miguel Ramírez",
+  "license": "MIT",
+  "homepage": "https://github.com/rmzmiguel/MigButton#readme",
+  "bugs": {
+    "url": "https://github.com/rmzmiguel/MigButton/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
