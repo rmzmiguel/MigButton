@@ -195,7 +195,7 @@
 }
 
 .appearance-classic:hover {
-  color: var(--color-primary, #fff);
+  color: var(--color-primary, #00202c);
   border-color: var(--color-hover, #0ea5e9);
 }
 
