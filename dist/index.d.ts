@@ -1,10 +1,5 @@
 export { default } from './FancyButton';
 export { default as FancyButton } from './FancyButton';
 export type { FancyButtonProps } from './FancyButton';
-
-// Re-exportar los tipos para mayor conveniencia
-export type {
-  Variant,
-  Appearance,
-  Size
-} from './FancyButton';
+export type { Variant, Appearance, Size } from './FancyButton';
+//# sourceMappingURL=index.d.ts.map

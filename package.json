@@ -11,19 +11,36 @@
     "README.md"
   ],
   "scripts": {
-    "build": "npm run clean && npm run build:types && npm run build:js && npm run build:css",
-    "build:types": "tsc --emitDeclarationOnly --outDir dist",
+    "build": "npm run clean && npm run build:js && npm run build:css",
     "build:js": "rollup -c",
-    "build:css": "cp src/FancyButton.css dist/",
+    "build:css": "cp src/FancyButton.css dist/ || copy src\\FancyButton.css dist\\",
     "clean": "rimraf dist",
     "dev": "rollup -c -w",
     "prepublishOnly": "npm run build",
     "postinstall": "npm run build || echo 'Build falló, usando archivos pre-compilados'",
     "prepare": "npm run build || echo 'Build falló durante prepare'"
   },
+  "keywords": [
+    "react",
+    "button",
+    "component",
+    "ui",
+    "typescript",
+    "javascript",
+    "github-package"
+  ],
+  "author": "Miguel Ramírez",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/rmzmiguel/MigButton.git"
+  },
+  "homepage": "https://github.com/rmzmiguel/MigButton#readme",
+  "bugs": {
+    "url": "https://github.com/rmzmiguel/MigButton/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "peerDependencies": {
     "react": "*",
@@ -37,24 +54,6 @@
       "optional": true
     }
   },
-  "keywords": [
-    "react",
-    "button",
-    "component",
-    "ui",
-    "typescript",
-    "javascript",
-    "github-package"
-  ],
-  "author": "Miguel Ramírez",
-  "license": "MIT",
-  "homepage": "https://github.com/rmzmiguel/MigButton#readme",
-  "bugs": {
-    "url": "https://github.com/rmzmiguel/MigButton/issues"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
@@ -64,7 +63,7 @@
     "@types/react-dom": "^18.2.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rimraf": "^5.0.5",
+    "rimraf": "^5.0.10",
     "rollup": "^4.9.2",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",

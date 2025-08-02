@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import './FancyButton.css';
 
 // Tipos exportados para compatibilidad total
 export type Variant = '3d' | 'flat' | 'outline' | 'text';
